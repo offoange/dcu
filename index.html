@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRIQUES.STORE — Diagrammes UML</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:#f5f5f5;color:#222}
+header{background:#1a1a1a;color:#fff;padding:28px 20px;text-align:center}
+header h1{font-size:1.7rem}header h1 span{color:#FF8C00}
+header p{color:#888;font-size:.85rem;margin-top:4px}
+.tabs{display:flex;justify-content:center;background:#fff;border-bottom:2px solid #ddd;position:sticky;top:0;z-index:99;flex-wrap:wrap}
+.tb{padding:13px 22px;border:none;background:none;font-family:inherit;font-size:.88rem;font-weight:600;color:#777;cursor:pointer;border-bottom:3px solid transparent}
+.tb:hover{color:#FF8C00}.tb.a{color:#FF8C00;border-bottom-color:#FF8C00}
+.tc{display:none;padding:24px 16px;max-width:1200px;margin:0 auto}.tc.a{display:block}
+h3{font-size:1.05rem;font-weight:700;margin:24px 0 10px;padding-left:10px;border-left:4px solid #FF8C00;color:#333}h3:first-child{margin-top:0}
+.dw{background:#fff;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.06);padding:12px;overflow-x:auto;margin-bottom:20px}.dw svg{display:block;margin:0 auto}
+.leg{background:#fafafa;border:1px solid #e5e5e5;border-radius:8px;padding:10px 14px;margin-bottom:20px;font-size:.8rem;color:#666;display:flex;flex-wrap:wrap;gap:14px}.leg b{color:#333}
+</style>
+</head>
+<body>
+<header><h1><span>BRIQUES</span>.STORE</h1><p>Diagrammes UML de Cas d'Utilisation</p></header>
+<div class="tabs">
+<button class="tb a" onclick="st('t1',this)"> App Mobile</button>
+<button class="tb" onclick="st('t2',this)"> Back-Office</button>
+<button class="tb" onclick="st('t3',this)"> Backend API</button>
+</div>
+<!-- APP MOBILE -->
+<div id="t1" class="tc a">
+<div class="leg"><b>Légende :</b><span>🟠 Client Particulier</span><span>🔵 Client Pro</span><span>⚙️ Système</span><span>── association</span><span>- - → «include»</span></div>
+<h3>1. Authentification &amp; Profil</h3>
+<div class="dw"><svg viewBox="0 0 880 440" width="880" height="440" xmlns="http://www.w3.org/2000/svg">
+<rect x="175" y="10" width="520" height="420" rx="16" fill="none" stroke="#ccc" stroke-width="1.8" stroke-dasharray="7,4"/><text x="435" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#FF8C00">Système — Authentification &amp; Profil</text>
+<circle cx="70" cy="140" r="16" fill="none" stroke="#FF8C00" stroke-width="2.2"/><line x1="70" y1="156" x2="70" y2="198" stroke="#FF8C00" stroke-width="2.2"/><line x1="48" y1="174" x2="92" y2="174" stroke="#FF8C00" stroke-width="2.2"/><line x1="70" y1="198" x2="48" y2="228" stroke="#FF8C00" stroke-width="2.2"/><line x1="70" y1="198" x2="92" y2="228" stroke="#FF8C00" stroke-width="2.2"/><text x="70" y="248" text-anchor="middle" font-size="11" font-weight="700" fill="#FF8C00">Client</text><text x="70" y="261" text-anchor="middle" font-size="10" fill="#FF8C00">Particulier</text>
+<circle cx="70" cy="330" r="16" fill="none" stroke="#2196F3" stroke-width="2.2"/><line x1="70" y1="346" x2="70" y2="382" stroke="#2196F3" stroke-width="2.2"/><line x1="48" y1="362" x2="92" y2="362" stroke="#2196F3" stroke-width="2.2"/><line x1="70" y1="382" x2="48" y2="408" stroke="#2196F3" stroke-width="2.2"/><line x1="70" y1="382" x2="92" y2="408" stroke="#2196F3" stroke-width="2.2"/><text x="70" y="428" text-anchor="middle" font-size="11" font-weight="700" fill="#2196F3">Client Pro</text>
+<circle cx="810" cy="170" r="15" fill="none" stroke="#666" stroke-width="2"/><line x1="810" y1="185" x2="810" y2="222" stroke="#666" stroke-width="2"/><line x1="790" y1="200" x2="830" y2="200" stroke="#666" stroke-width="2"/><line x1="810" y1="222" x2="790" y2="248" stroke="#666" stroke-width="2"/><line x1="810" y1="222" x2="830" y2="248" stroke="#666" stroke-width="2"/><text x="810" y="268" text-anchor="middle" font-size="11" font-weight="700" fill="#666">Système</text>
+<ellipse cx="390" cy="65" rx="125" ry="21" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="390" y="70" text-anchor="middle" font-size="11">S'inscrire</text>
+<ellipse cx="390" cy="115" rx="125" ry="21" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="390" y="120" text-anchor="middle" font-size="11">Vérifier téléphone (OTP)</text>
+<ellipse cx="390" cy="165" rx="125" ry="21" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="390" y="170" text-anchor="middle" font-size="11">Se connecter</text>
+<ellipse cx="390" cy="215" rx="125" ry="21" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="390" y="220" text-anchor="middle" font-size="11">Connexion biométrique</text>
+<ellipse cx="390" cy="265" rx="125" ry="21" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="390" y="270" text-anchor="middle" font-size="11">Récupérer mot de passe</text>
+<ellipse cx="390" cy="315" rx="125" ry="21" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="390" y="320" text-anchor="middle" font-size="11">Modifier son profil</text>
+<ellipse cx="390" cy="365" rx="125" ry="21" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="390" y="370" text-anchor="middle" font-size="11">Gérer adresses de livraison</text>
+<ellipse cx="390" cy="415" rx="125" ry="21" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.3"/><text x="390" y="420" text-anchor="middle" font-size="11">Renseigner infos entreprise</text>
+<ellipse cx="650" cy="100" rx="90" ry="18" fill="#F3E5F5" stroke="#9C27B0" stroke-width="1" stroke-dasharray="4,3"/><text x="650" y="104" text-anchor="middle" font-size="9" fill="#7B1FA2">«include» Envoi SMS OTP</text>
+<ellipse cx="650" cy="265" rx="90" ry="18" fill="#F3E5F5" stroke="#9C27B0" stroke-width="1" stroke-dasharray="4,3"/><text x="650" y="269" text-anchor="middle" font-size="9" fill="#7B1FA2">«include» Envoi SMS OTP</text>
+<line x1="92" y1="155" x2="265" y2="65" stroke="#FF8C00" stroke-width="1" opacity=".7"/><line x1="92" y1="163" x2="265" y2="115" stroke="#FF8C00" stroke-width="1" opacity=".7"/><line x1="92" y1="174" x2="265" y2="165" stroke="#FF8C00" stroke-width="1" opacity=".7"/><line x1="92" y1="185" x2="265" y2="215" stroke="#FF8C00" stroke-width="1" opacity=".7"/><line x1="92" y1="195" x2="265" y2="265" stroke="#FF8C00" stroke-width="1" opacity=".7"/><line x1="92" y1="200" x2="265" y2="315" stroke="#FF8C00" stroke-width="1" opacity=".7"/><line x1="92" y1="205" x2="265" y2="365" stroke="#FF8C00" stroke-width="1" opacity=".7"/>
+<line x1="92" y1="340" x2="265" y2="165" stroke="#2196F3" stroke-width="1" opacity=".5" stroke-dasharray="3,2"/><line x1="92" y1="350" x2="265" y2="315" stroke="#2196F3" stroke-width="1"/><line x1="92" y1="360" x2="265" y2="365" stroke="#2196F3" stroke-width="1"/><line x1="92" y1="370" x2="265" y2="415" stroke="#2196F3" stroke-width="1.2"/>
+<line x1="515" y1="70" x2="560" y2="95" stroke="#9C27B0" stroke-width="1" stroke-dasharray="4,3"/><line x1="515" y1="265" x2="560" y2="265" stroke="#9C27B0" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="793" y1="185" x2="740" y2="100" stroke="#666" stroke-width="1"/><line x1="793" y1="205" x2="740" y2="265" stroke="#666" stroke-width="1"/>
+</svg></div>
+
+<h3>2. Catalogue, Simulateur &amp; Panier</h3>
+<div class="dw"><svg viewBox="0 0 920 500" width="920" height="500" xmlns="http://www.w3.org/2000/svg">
+<rect x="170" y="10" width="560" height="480" rx="16" fill="none" stroke="#ccc" stroke-width="1.8" stroke-dasharray="7,4"/><text x="450" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#FF8C00">Système — Catalogue, Simulateur &amp; Panier</text>
+<circle cx="65" cy="230" r="18" fill="none" stroke="#FF8C00" stroke-width="2.2"/><line x1="65" y1="248" x2="65" y2="292" stroke="#FF8C00" stroke-width="2.2"/><line x1="42" y1="268" x2="88" y2="268" stroke="#FF8C00" stroke-width="2.2"/><line x1="65" y1="292" x2="42" y2="322" stroke="#FF8C00" stroke-width="2.2"/><line x1="65" y1="292" x2="88" y2="322" stroke="#FF8C00" stroke-width="2.2"/><text x="65" y="342" text-anchor="middle" font-size="12" font-weight="700" fill="#FF8C00">Client</text>
+<ellipse cx="400" cy="60" rx="140" ry="20" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.3"/><text x="400" y="64" text-anchor="middle" font-size="11">Parcourir les catégories</text>
+<ellipse cx="400" cy="108" rx="140" ry="20" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.3"/><text x="400" y="112" text-anchor="middle" font-size="11">Consulter fiche produit</text>
+<ellipse cx="400" cy="156" rx="140" ry="20" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.3"/><text x="400" y="160" text-anchor="middle" font-size="11">Rechercher un produit</text>
+<ellipse cx="400" cy="204" rx="140" ry="20" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.3"/><text x="400" y="208" text-anchor="middle" font-size="11">Filtrer et trier les résultats</text>
+<ellipse cx="400" cy="260" rx="140" ry="20" fill="#EDE7F6" stroke="#9C27B0" stroke-width="1.3"/><text x="400" y="264" text-anchor="middle" font-size="11">Calculer le nombre de briques</text>
+<ellipse cx="400" cy="316" rx="140" ry="20" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="400" y="320" text-anchor="middle" font-size="11">Ajouter au panier</text>
+<ellipse cx="400" cy="364" rx="140" ry="20" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="400" y="368" text-anchor="middle" font-size="11">Modifier / Supprimer du panier</text>
+<ellipse cx="400" cy="412" rx="140" ry="20" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="400" y="416" text-anchor="middle" font-size="11">Voir récapitulatif total FCFA</text>
+<ellipse cx="400" cy="462" rx="140" ry="20" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.5"/><text x="400" y="466" text-anchor="middle" font-size="11" font-weight="600">Passer commande (checkout)</text>
+<ellipse cx="680" cy="430" rx="100" ry="16" fill="#fafafa" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><text x="680" y="434" text-anchor="middle" font-size="9" fill="#666">«include» Choisir livraison</text>
+<ellipse cx="680" cy="462" rx="100" ry="16" fill="#fafafa" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><text x="680" y="466" text-anchor="middle" font-size="9" fill="#666">«include» Choisir paiement</text>
+<ellipse cx="680" cy="490" rx="100" ry="16" fill="#fafafa" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><text x="680" y="494" text-anchor="middle" font-size="9" fill="#666">«include» Effectuer paiement</text>
+<line x1="90" y1="225" x2="260" y2="60" stroke="#aaa" stroke-width="1"/><line x1="90" y1="232" x2="260" y2="108" stroke="#aaa" stroke-width="1"/><line x1="90" y1="240" x2="260" y2="156" stroke="#aaa" stroke-width="1"/><line x1="90" y1="248" x2="260" y2="204" stroke="#aaa" stroke-width="1"/><line x1="90" y1="255" x2="260" y2="260" stroke="#aaa" stroke-width="1"/><line x1="90" y1="262" x2="260" y2="316" stroke="#aaa" stroke-width="1"/><line x1="90" y1="270" x2="260" y2="364" stroke="#aaa" stroke-width="1"/><line x1="90" y1="278" x2="260" y2="412" stroke="#aaa" stroke-width="1"/><line x1="90" y1="285" x2="260" y2="462" stroke="#aaa" stroke-width="1"/>
+<line x1="540" y1="458" x2="580" y2="434" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><line x1="540" y1="462" x2="580" y2="462" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><line x1="540" y1="468" x2="580" y2="488" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+</svg></div>
+
+<h3>3. Commandes, Pré-commandes &amp; Support</h3>
+<div class="dw"><svg viewBox="0 0 920 520" width="920" height="520" xmlns="http://www.w3.org/2000/svg">
+<rect x="170" y="10" width="560" height="500" rx="16" fill="none" stroke="#ccc" stroke-width="1.8" stroke-dasharray="7,4"/><text x="450" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#FF8C00">Système — Commandes, Pré-commandes &amp; Support</text>
+<circle cx="65" cy="210" r="18" fill="none" stroke="#FF8C00" stroke-width="2.2"/><line x1="65" y1="228" x2="65" y2="270" stroke="#FF8C00" stroke-width="2.2"/><line x1="42" y1="248" x2="88" y2="248" stroke="#FF8C00" stroke-width="2.2"/><line x1="65" y1="270" x2="42" y2="298" stroke="#FF8C00" stroke-width="2.2"/><line x1="65" y1="270" x2="88" y2="298" stroke="#FF8C00" stroke-width="2.2"/><text x="65" y="318" text-anchor="middle" font-size="12" font-weight="700" fill="#FF8C00">Client</text>
+<circle cx="845" cy="180" r="15" fill="none" stroke="#666" stroke-width="2"/><line x1="845" y1="195" x2="845" y2="228" stroke="#666" stroke-width="2"/><line x1="826" y1="210" x2="864" y2="210" stroke="#666" stroke-width="2"/><line x1="845" y1="228" x2="826" y2="252" stroke="#666" stroke-width="2"/><line x1="845" y1="228" x2="864" y2="252" stroke="#666" stroke-width="2"/><text x="845" y="270" text-anchor="middle" font-size="11" font-weight="700" fill="#666">Système</text>
+<text x="260" y="58" font-size="10" font-weight="700" fill="#4CAF50">COMMANDES</text>
+<ellipse cx="400" cy="80" rx="140" ry="19" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.3"/><text x="400" y="84" text-anchor="middle" font-size="11">Consulter ses commandes</text>
+<ellipse cx="400" cy="122" rx="140" ry="19" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.3"/><text x="400" y="126" text-anchor="middle" font-size="11">Suivre la progression (timeline)</text>
+<ellipse cx="400" cy="164" rx="140" ry="19" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.3"/><text x="400" y="168" text-anchor="middle" font-size="11">Télécharger facture / bon PDF</text>
+<ellipse cx="400" cy="206" rx="140" ry="19" fill="#FFEBEE" stroke="#F44336" stroke-width="1.3"/><text x="400" y="210" text-anchor="middle" font-size="11">Annuler une commande</text>
+<text x="260" y="244" font-size="10" font-weight="700" fill="#9C27B0">PRÉ-COMMANDES</text>
+<ellipse cx="400" cy="265" rx="140" ry="19" fill="#EDE7F6" stroke="#9C27B0" stroke-width="1.3"/><text x="400" y="269" text-anchor="middle" font-size="11">Créer une pré-commande</text>
+<ellipse cx="400" cy="307" rx="140" ry="19" fill="#EDE7F6" stroke="#9C27B0" stroke-width="1.3"/><text x="400" y="311" text-anchor="middle" font-size="11">Consulter l'échéancier</text>
+<ellipse cx="400" cy="349" rx="140" ry="19" fill="#EDE7F6" stroke="#9C27B0" stroke-width="1.3"/><text x="400" y="353" text-anchor="middle" font-size="11">Payer une échéance</text>
+<ellipse cx="400" cy="391" rx="140" ry="19" fill="#EDE7F6" stroke="#9C27B0" stroke-width="1.3"/><text x="400" y="395" text-anchor="middle" font-size="11">Voir progression (% payé)</text>
+<text x="260" y="426" font-size="10" font-weight="700" fill="#F44336">SUPPORT</text>
+<ellipse cx="400" cy="448" rx="140" ry="19" fill="#FFEBEE" stroke="#F44336" stroke-width="1.3"/><text x="400" y="452" text-anchor="middle" font-size="11">Soumettre une réclamation</text>
+<ellipse cx="400" cy="490" rx="140" ry="19" fill="#FFEBEE" stroke="#F44336" stroke-width="1.3"/><text x="400" y="494" text-anchor="middle" font-size="11">Contacter le support</text>
+<ellipse cx="680" cy="120" rx="85" ry="16" fill="#fafafa" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><text x="680" y="124" text-anchor="middle" font-size="9" fill="#666">«include» Notifier SMS</text>
+<ellipse cx="680" cy="265" rx="85" ry="16" fill="#fafafa" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><text x="680" y="269" text-anchor="middle" font-size="9" fill="#666">«include» Bloquer prix</text>
+<ellipse cx="680" cy="349" rx="95" ry="16" fill="#fafafa" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><text x="680" y="353" text-anchor="middle" font-size="9" fill="#666">«include» Rappel échéance</text>
+<line x1="90" y1="210" x2="260" y2="80" stroke="#aaa" stroke-width="1"/><line x1="90" y1="218" x2="260" y2="122" stroke="#aaa" stroke-width="1"/><line x1="90" y1="226" x2="260" y2="164" stroke="#aaa" stroke-width="1"/><line x1="90" y1="234" x2="260" y2="206" stroke="#aaa" stroke-width="1"/><line x1="90" y1="242" x2="260" y2="265" stroke="#aaa" stroke-width="1"/><line x1="90" y1="250" x2="260" y2="307" stroke="#aaa" stroke-width="1"/><line x1="90" y1="258" x2="260" y2="349" stroke="#aaa" stroke-width="1"/><line x1="90" y1="265" x2="260" y2="391" stroke="#aaa" stroke-width="1"/><line x1="90" y1="272" x2="260" y2="448" stroke="#aaa" stroke-width="1"/><line x1="90" y1="278" x2="260" y2="490" stroke="#aaa" stroke-width="1"/>
+<line x1="540" y1="122" x2="595" y2="120" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><line x1="540" y1="265" x2="595" y2="265" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><line x1="540" y1="349" x2="585" y2="349" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="830" y1="192" x2="765" y2="120" stroke="#666" stroke-width="1"/><line x1="830" y1="210" x2="765" y2="265" stroke="#666" stroke-width="1"/><line x1="830" y1="225" x2="775" y2="349" stroke="#666" stroke-width="1"/>
+</svg></div>
+</div>
+<!-- BACK-OFFICE (3 RÔLES CORRIGÉS) -->
+<div id="t2" class="tc">
+<div class="leg"><b>3 Acteurs :</b><span style="color:#FF8C00">🟠 Super Admin — accès total</span><span style="color:#2196F3">🔵 Resp. Commercial &amp; Logistique</span><span style="color:#009688">🔷 Service Client</span></div>
+
+<h3>1. Gestion des commandes &amp; Livraisons</h3>
+<div class="dw"><svg viewBox="0 0 980 540" width="980" height="540" xmlns="http://www.w3.org/2000/svg">
+<rect x="190" y="10" width="570" height="520" rx="16" fill="none" stroke="#ccc" stroke-width="1.8" stroke-dasharray="7,4"/><text x="475" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#FF8C00">Back-Office — Commandes &amp; Livraisons</text>
+<circle cx="65" cy="80" r="14" fill="none" stroke="#FF8C00" stroke-width="2.2"/><line x1="65" y1="94" x2="65" y2="125" stroke="#FF8C00" stroke-width="2"/><line x1="46" y1="108" x2="84" y2="108" stroke="#FF8C00" stroke-width="2"/><line x1="65" y1="125" x2="46" y2="147" stroke="#FF8C00" stroke-width="2"/><line x1="65" y1="125" x2="84" y2="147" stroke="#FF8C00" stroke-width="2"/><text x="65" y="163" text-anchor="middle" font-size="9" font-weight="700" fill="#FF8C00">Super Admin</text><text x="65" y="174" text-anchor="middle" font-size="8" fill="#FF8C00">(accès total)</text>
+<circle cx="65" cy="270" r="14" fill="none" stroke="#2196F3" stroke-width="2.2"/><line x1="65" y1="284" x2="65" y2="318" stroke="#2196F3" stroke-width="2"/><line x1="46" y1="300" x2="84" y2="300" stroke="#2196F3" stroke-width="2"/><line x1="65" y1="318" x2="46" y2="342" stroke="#2196F3" stroke-width="2"/><line x1="65" y1="318" x2="84" y2="342" stroke="#2196F3" stroke-width="2"/><text x="65" y="358" text-anchor="middle" font-size="9" font-weight="700" fill="#2196F3">Resp. Com.</text><text x="65" y="370" text-anchor="middle" font-size="9" font-weight="700" fill="#2196F3">&amp; Logistique</text>
+<circle cx="910" cy="370" r="14" fill="none" stroke="#009688" stroke-width="2.2"/><line x1="910" y1="384" x2="910" y2="415" stroke="#009688" stroke-width="2"/><line x1="892" y1="398" x2="928" y2="398" stroke="#009688" stroke-width="2"/><line x1="910" y1="415" x2="892" y2="437" stroke="#009688" stroke-width="2"/><line x1="910" y1="415" x2="928" y2="437" stroke="#009688" stroke-width="2"/><text x="910" y="453" text-anchor="middle" font-size="9" font-weight="700" fill="#009688">Service</text><text x="910" y="464" text-anchor="middle" font-size="9" font-weight="700" fill="#009688">Client</text>
+<ellipse cx="475" cy="60" rx="150" ry="20" fill="#eee" stroke="#888" stroke-width="1.3"/><text x="475" y="64" text-anchor="middle" font-size="11">Voir la liste des commandes</text>
+<ellipse cx="475" cy="108" rx="150" ry="20" fill="#eee" stroke="#888" stroke-width="1.3"/><text x="475" y="112" text-anchor="middle" font-size="11">Voir le détail d'une commande</text>
+<ellipse cx="475" cy="162" rx="150" ry="20" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="475" y="166" text-anchor="middle" font-size="11">Valider une commande</text>
+<ellipse cx="475" cy="212" rx="150" ry="20" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="475" y="216" text-anchor="middle" font-size="11">Passer en fabrication</text>
+<ellipse cx="475" cy="262" rx="150" ry="20" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="475" y="266" text-anchor="middle" font-size="11">Assigner un chauffeur</text>
+<ellipse cx="475" cy="312" rx="150" ry="20" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="475" y="316" text-anchor="middle" font-size="11">Marquer comme expédiée</text>
+<ellipse cx="475" cy="362" rx="150" ry="20" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="475" y="366" text-anchor="middle" font-size="11">Marquer comme livrée</text>
+<ellipse cx="475" cy="412" rx="150" ry="20" fill="#FFEBEE" stroke="#F44336" stroke-width="1.3"/><text x="475" y="416" text-anchor="middle" font-size="11">Annuler une commande</text>
+<ellipse cx="475" cy="458" rx="150" ry="20" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="475" y="462" text-anchor="middle" font-size="11">Générer facture / bon PDF</text>
+<ellipse cx="475" cy="504" rx="150" ry="20" fill="#E0F2F1" stroke="#009688" stroke-width="1.3"/><text x="475" y="508" text-anchor="middle" font-size="11">Ajouter note / Contacter client</text>
+<line x1="86" y1="92" x2="325" y2="60" stroke="#FF8C00" stroke-width=".7" opacity=".35"/><line x1="86" y1="100" x2="325" y2="108" stroke="#FF8C00" stroke-width=".7" opacity=".35"/><line x1="86" y1="108" x2="325" y2="162" stroke="#FF8C00" stroke-width=".7" opacity=".35"/>
+<line x1="86" y1="270" x2="325" y2="60" stroke="#2196F3" stroke-width="1"/><line x1="86" y1="276" x2="325" y2="108" stroke="#2196F3" stroke-width="1"/><line x1="86" y1="282" x2="325" y2="162" stroke="#2196F3" stroke-width="1"/><line x1="86" y1="288" x2="325" y2="212" stroke="#2196F3" stroke-width="1"/><line x1="86" y1="294" x2="325" y2="262" stroke="#2196F3" stroke-width="1"/><line x1="86" y1="300" x2="325" y2="312" stroke="#2196F3" stroke-width="1"/><line x1="86" y1="306" x2="325" y2="362" stroke="#2196F3" stroke-width="1"/><line x1="86" y1="312" x2="325" y2="412" stroke="#2196F3" stroke-width="1"/><line x1="86" y1="318" x2="325" y2="458" stroke="#2196F3" stroke-width="1"/><line x1="86" y1="324" x2="325" y2="504" stroke="#2196F3" stroke-width="1"/>
+<line x1="890" y1="375" x2="625" y2="60" stroke="#009688" stroke-width=".7" opacity=".4"/><line x1="890" y1="382" x2="625" y2="108" stroke="#009688" stroke-width=".7" opacity=".4"/><line x1="890" y1="405" x2="625" y2="504" stroke="#009688" stroke-width="1.2"/>
+</svg></div>
+<h3>2. Catalogue, Stocks &amp; Pré-commandes</h3>
+<div class="dw"><svg viewBox="0 0 980 290" width="980" height="290" xmlns="http://www.w3.org/2000/svg">
+<rect x="190" y="10" width="400" height="270" rx="16" fill="none" stroke="#ccc" stroke-width="1.8" stroke-dasharray="7,4"/><text x="390" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#2196F3">Catalogue</text>
+<circle cx="65" cy="140" r="15" fill="none" stroke="#2196F3" stroke-width="2.2"/><line x1="65" y1="155" x2="65" y2="192" stroke="#2196F3" stroke-width="2"/><line x1="44" y1="172" x2="86" y2="172" stroke="#2196F3" stroke-width="2"/><line x1="65" y1="192" x2="44" y2="218" stroke="#2196F3" stroke-width="2"/><line x1="65" y1="192" x2="86" y2="218" stroke="#2196F3" stroke-width="2"/><text x="65" y="234" text-anchor="middle" font-size="9" font-weight="700" fill="#2196F3">Resp. Com.</text><text x="65" y="246" text-anchor="middle" font-size="9" font-weight="700" fill="#2196F3">&amp; Logistique</text>
+<text x="240" y="56" font-size="10" font-weight="700" fill="#2196F3">CATALOGUE</text>
+<ellipse cx="390" cy="76" rx="140" ry="18" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="390" y="80" text-anchor="middle" font-size="10">Créer un produit</text>
+<ellipse cx="390" cy="114" rx="140" ry="18" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="390" y="118" text-anchor="middle" font-size="10">Modifier un produit / prix</text>
+<ellipse cx="390" cy="152" rx="140" ry="18" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="390" y="156" text-anchor="middle" font-size="10">Gérer les images</text>
+<ellipse cx="390" cy="190" rx="140" ry="18" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="390" y="194" text-anchor="middle" font-size="10">Archiver / Masquer un produit</text>
+<ellipse cx="390" cy="228" rx="140" ry="18" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="390" y="232" text-anchor="middle" font-size="10">Historique des modifications</text>
+<line x1="88" y1="136" x2="250" y2="76" stroke="#2196F3" stroke-width="1"/><line x1="88" y1="140" x2="250" y2="114" stroke="#2196F3" stroke-width="1"/><line x1="88" y1="144" x2="250" y2="152" stroke="#2196F3" stroke-width="1"/><line x1="88" y1="148" x2="250" y2="190" stroke="#2196F3" stroke-width="1"/><line x1="88" y1="152" x2="250" y2="228" stroke="#2196F3" stroke-width="1"/>
+<!-- PRÉ-COMMANDES -->
+<rect x="620" y="10" width="330" height="270" rx="16" fill="none" stroke="#ccc" stroke-width="1.8" stroke-dasharray="7,4"/><text x="785" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#9C27B0">Pré-commandes</text>
+<circle cx="920" cy="140" r="14" fill="none" stroke="#2196F3" stroke-width="2.2"/><line x1="920" y1="154" x2="920" y2="185" stroke="#2196F3" stroke-width="2"/><line x1="902" y1="169" x2="938" y2="169" stroke="#2196F3" stroke-width="2"/><line x1="920" y1="185" x2="902" y2="208" stroke="#2196F3" stroke-width="2"/><line x1="920" y1="185" x2="938" y2="208" stroke="#2196F3" stroke-width="2"/><text x="920" y="224" text-anchor="middle" font-size="9" font-weight="700" fill="#2196F3">Resp. Com.</text><text x="920" y="236" text-anchor="middle" font-size="9" font-weight="700" fill="#2196F3">&amp; Logistique</text>
+<ellipse cx="780" cy="62" rx="125" ry="18" fill="#EDE7F6" stroke="#9C27B0" stroke-width="1.3"/><text x="780" y="66" text-anchor="middle" font-size="10">Voir les pré-commandes</text>
+<ellipse cx="780" cy="102" rx="125" ry="18" fill="#EDE7F6" stroke="#9C27B0" stroke-width="1.3"/><text x="780" y="106" text-anchor="middle" font-size="10">Voir détail + échéancier</text>
+<ellipse cx="780" cy="142" rx="125" ry="18" fill="#EDE7F6" stroke="#9C27B0" stroke-width="1.3"/><text x="780" y="146" text-anchor="middle" font-size="10">Envoyer rappel de paiement</text>
+<ellipse cx="780" cy="182" rx="125" ry="18" fill="#EDE7F6" stroke="#9C27B0" stroke-width="1.3"/><text x="780" y="186" text-anchor="middle" font-size="10">Suspendre une pré-commande</text>
+<ellipse cx="780" cy="222" rx="125" ry="18" fill="#EDE7F6" stroke="#9C27B0" stroke-width="1.3"/><text x="780" y="226" text-anchor="middle" font-size="10">Réactiver après régularisation</text>
+<ellipse cx="780" cy="262" rx="125" ry="18" fill="#EDE7F6" stroke="#9C27B0" stroke-width="1.3"/><text x="780" y="266" text-anchor="middle" font-size="10">Planifier une livraison</text>
+<line x1="906" y1="143" x2="905" y2="62" stroke="#2196F3" stroke-width="1"/><line x1="906" y1="148" x2="905" y2="102" stroke="#2196F3" stroke-width="1"/><line x1="906" y1="154" x2="905" y2="142" stroke="#2196F3" stroke-width="1"/><line x1="906" y1="160" x2="905" y2="182" stroke="#2196F3" stroke-width="1"/><line x1="906" y1="166" x2="905" y2="222" stroke="#2196F3" stroke-width="1"/><line x1="906" y1="172" x2="905" y2="262" stroke="#2196F3" stroke-width="1"/>
+</svg></div>
+<h3>3. Réclamations &amp; Paramètres système</h3>
+<div class="dw"><svg viewBox="0 0 1060 450" width="1060" height="450" xmlns="http://www.w3.org/2000/svg">
+<rect x="170" y="10" width="350" height="330" rx="16" fill="none" stroke="#ccc" stroke-width="1.8" stroke-dasharray="7,4"/><text x="345" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#009688">Réclamations</text>
+<circle cx="60" cy="175" r="14" fill="none" stroke="#009688" stroke-width="2.2"/><line x1="60" y1="189" x2="60" y2="222" stroke="#009688" stroke-width="2"/><line x1="42" y1="204" x2="78" y2="204" stroke="#009688" stroke-width="2"/><line x1="60" y1="222" x2="42" y2="245" stroke="#009688" stroke-width="2"/><line x1="60" y1="222" x2="78" y2="245" stroke="#009688" stroke-width="2"/><text x="60" y="262" text-anchor="middle" font-size="9" font-weight="700" fill="#009688">Service Client</text>
+<ellipse cx="345" cy="58" rx="120" ry="17" fill="#E0F2F1" stroke="#009688" stroke-width="1.3"/><text x="345" y="62" text-anchor="middle" font-size="10">Voir les réclamations</text>
+<ellipse cx="345" cy="96" rx="120" ry="17" fill="#E0F2F1" stroke="#009688" stroke-width="1.3"/><text x="345" y="100" text-anchor="middle" font-size="10">Créer une réclamation</text>
+<ellipse cx="345" cy="134" rx="120" ry="17" fill="#E0F2F1" stroke="#009688" stroke-width="1.3"/><text x="345" y="138" text-anchor="middle" font-size="10">S'assigner une réclamation</text>
+<ellipse cx="345" cy="172" rx="120" ry="17" fill="#E0F2F1" stroke="#009688" stroke-width="1.3"/><text x="345" y="176" text-anchor="middle" font-size="10">Contacter le client</text>
+<ellipse cx="345" cy="210" rx="120" ry="17" fill="#E0F2F1" stroke="#009688" stroke-width="1.3"/><text x="345" y="214" text-anchor="middle" font-size="10">Proposer résolution</text>
+<ellipse cx="345" cy="248" rx="120" ry="17" fill="#E0F2F1" stroke="#009688" stroke-width="1.3"/><text x="345" y="252" text-anchor="middle" font-size="10">Clôturer la réclamation</text>
+<ellipse cx="345" cy="295" rx="115" ry="15" fill="#fafafa" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><text x="345" y="299" text-anchor="middle" font-size="9" fill="#666">Remboursement / Échange / Avoir</text>
+<line x1="80" y1="172" x2="225" y2="58" stroke="#009688" stroke-width="1"/><line x1="80" y1="178" x2="225" y2="96" stroke="#009688" stroke-width="1"/><line x1="80" y1="184" x2="225" y2="134" stroke="#009688" stroke-width="1"/><line x1="80" y1="190" x2="225" y2="172" stroke="#009688" stroke-width="1"/><line x1="80" y1="196" x2="225" y2="210" stroke="#009688" stroke-width="1"/><line x1="80" y1="202" x2="225" y2="248" stroke="#009688" stroke-width="1"/>
+<line x1="345" y1="265" x2="345" y2="280" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+<!-- Gestion Clients partagée -->
+<rect x="170" y="350" width="350" height="90" rx="16" fill="none" stroke="#ccc" stroke-width="1.8" stroke-dasharray="7,4"/><text x="345" y="372" text-anchor="middle" font-size="11" font-weight="700" fill="#666">Gestion Clients (partagé)</text>
+<ellipse cx="280" cy="410" rx="90" ry="16" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="280" y="414" text-anchor="middle" font-size="10">Fiche client / Notes</text>
+<ellipse cx="440" cy="410" rx="68" ry="16" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="440" y="414" text-anchor="middle" font-size="10">SMS groupé</text>
+<line x1="60" y1="260" x2="200" y2="410" stroke="#009688" stroke-width="1" stroke-dasharray="3,2"/>
+<!-- PARAMÈTRES -->
+<rect x="560" y="10" width="310" height="430" rx="16" fill="none" stroke="#ccc" stroke-width="1.8" stroke-dasharray="7,4"/><text x="715" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#FF8C00">Paramètres &amp; Administration</text>
+<circle cx="1000" cy="200" r="14" fill="none" stroke="#FF8C00" stroke-width="2.2"/><line x1="1000" y1="214" x2="1000" y2="245" stroke="#FF8C00" stroke-width="2"/><line x1="982" y1="228" x2="1018" y2="228" stroke="#FF8C00" stroke-width="2"/><line x1="1000" y1="245" x2="982" y2="268" stroke="#FF8C00" stroke-width="2"/><line x1="1000" y1="245" x2="1018" y2="268" stroke="#FF8C00" stroke-width="2"/><text x="1000" y="285" text-anchor="middle" font-size="9" font-weight="700" fill="#FF8C00">Super Admin</text><text x="1000" y="297" text-anchor="middle" font-size="8" fill="#FF8C00">(uniquement)</text>
+<ellipse cx="715" cy="62" rx="122" ry="17" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="715" y="66" text-anchor="middle" font-size="10">Gérer comptes admin (3 rôles)</text>
+<ellipse cx="715" cy="102" rx="122" ry="17" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="715" y="106" text-anchor="middle" font-size="10">Configurer paiements</text>
+<ellipse cx="715" cy="142" rx="122" ry="17" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="715" y="146" text-anchor="middle" font-size="10">Configurer zones livraison</text>
+<ellipse cx="715" cy="182" rx="122" ry="17" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="715" y="186" text-anchor="middle" font-size="10">Configurer facturation / TVA</text>
+<ellipse cx="715" cy="222" rx="122" ry="17" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="715" y="226" text-anchor="middle" font-size="10">Configurer pré-commandes</text>
+<ellipse cx="715" cy="262" rx="122" ry="17" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="715" y="266" text-anchor="middle" font-size="10">Templates notifications</text>
+<ellipse cx="715" cy="302" rx="122" ry="17" fill="#FFEBEE" stroke="#F44336" stroke-width="1.3"/><text x="715" y="306" text-anchor="middle" font-size="10">Journaux d'audit</text>
+<text x="640" y="340" font-size="10" font-weight="700" fill="#666">RAPPORTS</text>
+<ellipse cx="715" cy="360" rx="122" ry="17" fill="#eee" stroke="#888" stroke-width="1.3"/><text x="715" y="364" text-anchor="middle" font-size="10">Rapports ventes / stocks / livraisons</text>
+<ellipse cx="715" cy="400" rx="122" ry="17" fill="#eee" stroke="#888" stroke-width="1.3"/><text x="715" y="404" text-anchor="middle" font-size="10">Exporter Excel / PDF</text>
+<line x1="980" y1="205" x2="837" y2="62" stroke="#FF8C00" stroke-width="1"/><line x1="980" y1="210" x2="837" y2="102" stroke="#FF8C00" stroke-width="1"/><line x1="980" y1="216" x2="837" y2="142" stroke="#FF8C00" stroke-width="1"/><line x1="980" y1="222" x2="837" y2="182" stroke="#FF8C00" stroke-width="1"/><line x1="980" y1="228" x2="837" y2="222" stroke="#FF8C00" stroke-width="1"/><line x1="980" y1="234" x2="837" y2="262" stroke="#FF8C00" stroke-width="1"/><line x1="980" y1="240" x2="837" y2="302" stroke="#FF8C00" stroke-width="1"/><line x1="980" y1="246" x2="837" y2="360" stroke="#FF8C00" stroke-width="1"/><line x1="980" y1="252" x2="837" y2="400" stroke="#FF8C00" stroke-width="1"/>
+</svg></div>
+</div>
+<!-- BACKEND API -->
+<div id="t3" class="tc">
+<div class="leg"><b>Acteurs :</b><span>🟠 App Mobile</span><span>🔵 Back-Office</span><span>🟢 Agrégateur Paiement</span><span>⚙️ Scheduler Cron</span></div>
+<h3>1. API Client &amp; API Admin</h3>
+<div class="dw"><svg viewBox="0 0 980 460" width="980" height="460" xmlns="http://www.w3.org/2000/svg">
+<rect x="195" y="10" width="540" height="440" rx="16" fill="none" stroke="#ccc" stroke-width="1.8" stroke-dasharray="7,4"/><text x="465" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#FF8C00">Backend NestJS — API REST</text>
+<circle cx="65" cy="140" r="16" fill="none" stroke="#FF8C00" stroke-width="2.2"/><line x1="65" y1="156" x2="65" y2="192" stroke="#FF8C00" stroke-width="2"/><line x1="44" y1="172" x2="86" y2="172" stroke="#FF8C00" stroke-width="2"/><line x1="65" y1="192" x2="44" y2="218" stroke="#FF8C00" stroke-width="2"/><line x1="65" y1="192" x2="86" y2="218" stroke="#FF8C00" stroke-width="2"/><text x="65" y="236" text-anchor="middle" font-size="10" font-weight="700" fill="#FF8C00">App Mobile</text>
+<circle cx="65" cy="350" r="16" fill="none" stroke="#2196F3" stroke-width="2.2"/><line x1="65" y1="366" x2="65" y2="400" stroke="#2196F3" stroke-width="2"/><line x1="44" y1="382" x2="86" y2="382" stroke="#2196F3" stroke-width="2"/><line x1="65" y1="400" x2="44" y2="424" stroke="#2196F3" stroke-width="2"/><line x1="65" y1="400" x2="86" y2="424" stroke="#2196F3" stroke-width="2"/><text x="65" y="442" text-anchor="middle" font-size="10" font-weight="700" fill="#2196F3">Back-Office</text>
+<circle cx="910" cy="180" r="15" fill="none" stroke="#4CAF50" stroke-width="2.2"/><line x1="910" y1="195" x2="910" y2="228" stroke="#4CAF50" stroke-width="2"/><line x1="892" y1="210" x2="928" y2="210" stroke="#4CAF50" stroke-width="2"/><line x1="910" y1="228" x2="892" y2="252" stroke="#4CAF50" stroke-width="2"/><line x1="910" y1="228" x2="928" y2="252" stroke="#4CAF50" stroke-width="2"/><text x="910" y="270" text-anchor="middle" font-size="10" font-weight="700" fill="#4CAF50">Agrégateur</text><text x="910" y="282" text-anchor="middle" font-size="9" fill="#4CAF50">Paiement</text>
+<text x="250" y="58" font-size="10" font-weight="700" fill="#FF8C00">API CLIENT</text>
+<ellipse cx="390" cy="78" rx="120" ry="17" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="390" y="82" text-anchor="middle" font-size="10">/auth — Authentification</text>
+<ellipse cx="390" cy="114" rx="120" ry="17" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.3"/><text x="390" y="118" text-anchor="middle" font-size="10">/products — Catalogue</text>
+<ellipse cx="390" cy="150" rx="120" ry="17" fill="#EDE7F6" stroke="#9C27B0" stroke-width="1.3"/><text x="390" y="154" text-anchor="middle" font-size="10">/simulator — Calculateur</text>
+<ellipse cx="390" cy="186" rx="120" ry="17" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="390" y="190" text-anchor="middle" font-size="10">/cart — Panier</text>
+<ellipse cx="390" cy="222" rx="120" ry="17" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="390" y="226" text-anchor="middle" font-size="10">/orders — Commandes</text>
+<ellipse cx="390" cy="258" rx="120" ry="17" fill="#FFF8E1" stroke="#FF9800" stroke-width="1.3"/><text x="390" y="262" text-anchor="middle" font-size="10">/preorders — Pré-commandes</text>
+<ellipse cx="390" cy="294" rx="120" ry="17" fill="#FFEBEE" stroke="#F44336" stroke-width="1.3"/><text x="390" y="298" text-anchor="middle" font-size="10">/payments — Paiements</text>
+<ellipse cx="640" cy="294" rx="100" ry="17" fill="#C8E6C9" stroke="#4CAF50" stroke-width="1.3"/><text x="640" y="298" text-anchor="middle" font-size="10">Webhook (HMAC)</text>
+<text x="250" y="334" font-size="10" font-weight="700" fill="#2196F3">API ADMIN</text>
+<ellipse cx="380" cy="354" rx="105" ry="17" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="380" y="358" text-anchor="middle" font-size="10">/admin/orders</text>
+<ellipse cx="380" cy="390" rx="105" ry="17" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="380" y="394" text-anchor="middle" font-size="10">/admin/products</text>
+<ellipse cx="550" cy="354" rx="105" ry="17" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="550" y="358" text-anchor="middle" font-size="10">/admin/stock</text>
+<ellipse cx="550" cy="390" rx="105" ry="17" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="550" y="394" text-anchor="middle" font-size="10">/admin/preorders</text>
+<ellipse cx="465" cy="428" rx="105" ry="17" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="465" y="432" text-anchor="middle" font-size="10">/admin/reports</text>
+<line x1="88" y1="140" x2="270" y2="78" stroke="#FF8C00" stroke-width="1"/><line x1="88" y1="150" x2="270" y2="114" stroke="#FF8C00" stroke-width="1"/><line x1="88" y1="158" x2="270" y2="150" stroke="#FF8C00" stroke-width="1"/><line x1="88" y1="166" x2="270" y2="186" stroke="#FF8C00" stroke-width="1"/><line x1="88" y1="174" x2="270" y2="222" stroke="#FF8C00" stroke-width="1"/><line x1="88" y1="182" x2="270" y2="258" stroke="#FF8C00" stroke-width="1"/><line x1="88" y1="190" x2="270" y2="294" stroke="#FF8C00" stroke-width="1"/>
+<line x1="88" y1="355" x2="275" y2="354" stroke="#2196F3" stroke-width="1"/><line x1="88" y1="365" x2="275" y2="390" stroke="#2196F3" stroke-width="1"/><line x1="88" y1="370" x2="445" y2="354" stroke="#2196F3" stroke-width="1"/><line x1="88" y1="378" x2="445" y2="390" stroke="#2196F3" stroke-width="1"/><line x1="88" y1="385" x2="360" y2="428" stroke="#2196F3" stroke-width="1"/>
+<line x1="893" y1="200" x2="740" y2="294" stroke="#4CAF50" stroke-width="1.2"/><line x1="510" y1="294" x2="540" y2="294" stroke="#4CAF50" stroke-width="1" stroke-dasharray="4,3"/>
+</svg></div>
+
+<h3>2. Tâches automatiques planifiées</h3>
+<div class="dw"><svg viewBox="0 0 860 320" width="860" height="320" xmlns="http://www.w3.org/2000/svg">
+<rect x="195" y="10" width="430" height="300" rx="16" fill="none" stroke="#ccc" stroke-width="1.8" stroke-dasharray="7,4"/><text x="410" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#FF8C00">Tâches planifiées (Cron / BullMQ)</text>
+<circle cx="75" cy="145" r="16" fill="none" stroke="#666" stroke-width="2.2"/><line x1="75" y1="161" x2="75" y2="198" stroke="#666" stroke-width="2"/><line x1="54" y1="178" x2="96" y2="178" stroke="#666" stroke-width="2"/><line x1="75" y1="198" x2="54" y2="224" stroke="#666" stroke-width="2"/><line x1="75" y1="198" x2="96" y2="224" stroke="#666" stroke-width="2"/><text x="75" y="244" text-anchor="middle" font-size="11" font-weight="700" fill="#666">Scheduler</text>
+<circle cx="780" cy="145" r="14" fill="none" stroke="#9C27B0" stroke-width="2"/><line x1="780" y1="159" x2="780" y2="190" stroke="#9C27B0" stroke-width="2"/><line x1="762" y1="174" x2="798" y2="174" stroke="#9C27B0" stroke-width="2"/><line x1="780" y1="190" x2="762" y2="212" stroke="#9C27B0" stroke-width="2"/><line x1="780" y1="190" x2="798" y2="212" stroke="#9C27B0" stroke-width="2"/><text x="780" y="228" text-anchor="middle" font-size="10" font-weight="700" fill="#9C27B0">SMS /</text><text x="780" y="240" text-anchor="middle" font-size="10" font-weight="700" fill="#9C27B0">WhatsApp</text>
+<ellipse cx="410" cy="58" rx="165" ry="17" fill="#FFEBEE" stroke="#F44336" stroke-width="1.3"/><text x="410" y="62" text-anchor="middle" font-size="10">Annuler paiements pending > 30min</text>
+<ellipse cx="410" cy="98" rx="165" ry="17" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="410" y="102" text-anchor="middle" font-size="10">Rappels échéances pré-commandes</text>
+<ellipse cx="410" cy="138" rx="165" ry="17" fill="#FFF3E0" stroke="#FF8C00" stroke-width="1.3"/><text x="410" y="142" text-anchor="middle" font-size="10">Détecter impayés → pénalités / suspension</text>
+<ellipse cx="410" cy="178" rx="165" ry="17" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.3"/><text x="410" y="182" text-anchor="middle" font-size="10">Vérifier seuils stock → alertes</text>
+<ellipse cx="410" cy="218" rx="165" ry="17" fill="#E3F2FD" stroke="#2196F3" stroke-width="1.3"/><text x="410" y="222" text-anchor="middle" font-size="10">Relancer paniers abandonnés</text>
+<ellipse cx="410" cy="258" rx="165" ry="17" fill="#eee" stroke="#888" stroke-width="1.3"/><text x="410" y="262" text-anchor="middle" font-size="10">Réconciliation comptable quotidienne</text>
+<ellipse cx="410" cy="295" rx="165" ry="17" fill="#F5F5F5" stroke="#aaa" stroke-width="1.3"/><text x="410" y="299" text-anchor="middle" font-size="10">Nettoyage données (comptes inactifs)</text>
+<line x1="98" y1="145" x2="245" y2="58" stroke="#888" stroke-width="1"/><line x1="98" y1="152" x2="245" y2="98" stroke="#888" stroke-width="1"/><line x1="98" y1="160" x2="245" y2="138" stroke="#888" stroke-width="1"/><line x1="98" y1="168" x2="245" y2="178" stroke="#888" stroke-width="1"/><line x1="98" y1="176" x2="245" y2="218" stroke="#888" stroke-width="1"/><line x1="98" y1="184" x2="245" y2="258" stroke="#888" stroke-width="1"/><line x1="98" y1="192" x2="245" y2="295" stroke="#888" stroke-width="1"/>
+<line x1="575" y1="98" x2="762" y2="150" stroke="#9C27B0" stroke-width="1" stroke-dasharray="4,3"/><line x1="575" y1="138" x2="762" y2="155" stroke="#9C27B0" stroke-width="1" stroke-dasharray="4,3"/><line x1="575" y1="218" x2="762" y2="165" stroke="#9C27B0" stroke-width="1" stroke-dasharray="4,3"/>
+</svg></div>
+</div>
+
+<script>
+function st(id,btn){
+document.querySelectorAll('.tc').forEach(t=>t.classList.remove('a'));
+document.querySelectorAll('.tb').forEach(b=>b.classList.remove('a'));
+document.getElementById(id).classList.add('a');
+btn.classList.add('a');
+window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
